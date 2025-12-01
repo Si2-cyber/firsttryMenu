@@ -1,0 +1,5 @@
+{
+  "name": "RedFlame Bistro",
+  "description": "A digital menu ordering application allowing customers to browse burgers, pizzas, and sandwiches, enter their table number, and place orders.",
+  "requestFramePermissions": []
+}
