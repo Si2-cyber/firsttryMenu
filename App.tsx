@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import { useState, useMemo } from 'react';
 import Header from './components/Header';
 import CategoryTabs from './components/CategoryTabs';
 import MenuItemCard from './components/MenuItemCard';
@@ -45,10 +45,10 @@ function App() {
   const handlePlaceOrder = (tableNumber: string) => {
     const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
     const total = subtotal + Math.round(subtotal * 0.05);
-    
+
     // Generate a random 4 digit order number
     const orderNumber = Math.floor(1000 + Math.random() * 9000).toString();
-    
+
     const newOrder: Order = {
       orderNumber,
       tableNumber,
@@ -70,8 +70,8 @@ function App() {
 
   return (
     <div className="min-h-screen bg-brand-light pb-10">
-      <Header 
-        cartCount={cartItemCount} 
+      <Header
+        cartCount={cartItemCount}
         currentView={currentView}
         onGoHome={() => setCurrentView('MENU')}
         onGoToCart={() => setCurrentView('CART')}
@@ -85,18 +85,18 @@ function App() {
               <p className="text-gray-500">Delicious meals prepared with love</p>
             </div>
 
-            <CategoryTabs 
-              selectedCategory={selectedCategory} 
-              onSelectCategory={setSelectedCategory} 
+            <CategoryTabs
+              selectedCategory={selectedCategory}
+              onSelectCategory={setSelectedCategory}
             />
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
               {filteredItems.map(item => {
                 const cartItem = cart.find(c => c.id === item.id);
                 return (
-                  <MenuItemCard 
-                    key={item.id} 
-                    item={item} 
+                  <MenuItemCard
+                    key={item.id}
+                    item={item}
                     quantityInCart={cartItem ? cartItem.quantity : 0}
                     onAdd={handleAddToCart}
                     onRemove={handleRemoveFromCart}
@@ -104,10 +104,10 @@ function App() {
                 );
               })}
             </div>
-            
+
             {cartItemCount > 0 && (
               <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 w-full max-w-sm px-4 md:hidden">
-                <button 
+                <button
                   onClick={() => setCurrentView('CART')}
                   className="w-full bg-brand-red text-white py-3 rounded-full shadow-2xl flex items-center justify-between px-6 hover:bg-red-800 transition-transform active:scale-95"
                 >
@@ -121,7 +121,7 @@ function App() {
         )}
 
         {currentView === 'CART' && (
-          <CartView 
+          <CartView
             cart={cart}
             onAdd={handleAddToCart}
             onRemove={handleRemoveFromCart}
@@ -131,7 +131,7 @@ function App() {
         )}
 
         {currentView === 'SUCCESS' && lastOrder && (
-          <OrderSuccessView 
+          <OrderSuccessView
             order={lastOrder}
             onNewOrder={startNewOrder}
           />

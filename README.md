@@ -1,20 +1,22 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# RedFlame Bistro - Digital Menu & Ordering System
 
-# Run and deploy your AI Studio app
+Welcome to the RedFlame Bistro digital menu! This application makes it easy for guests to browse our delicious offerings, place orders directly from their tables, and enjoy a seamless dining experience.
 
-This contains everything you need to run your app locally.
+## What This App Does
 
-View your app in AI Studio: https://ai.studio/apps/drive/1QjQtdEOD6eMedZjlCBsCDHCtM6lNwg86
+This app serves as a smart, interactive menu for the restaurant. Guests can:
 
-## Run Locally
+- **Browse Our Dishes:** View all our delicious meals, neatly organized by categories (like Burgers, Drinks, Desserts, etc.).
+- **Customize Your Meal:** Add and remove items from your cart to get your order exactly right before sending it to the kitchen.
+- **Order from the Table:** Place an order directly from your device by simply entering your table number. No need to flag down a server!
+- **Digital Receipts:** Get an instant order confirmation with a unique order number, an itemized breakdown, and the total cost of your meal.
 
-**Prerequisites:**  Node.js
+## Roadmap for Future Development
 
+We are constantly looking to improve the dining experience. Here is what we have planned for future updates:
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+- **Order History Profiles:** Allow frequent visitors to create profiles and quickly reorder their favorite meals.
+- **Dietary Filters & Tags:** Add the ability to easily filter the menu by dietary preferences (e.g., Vegetarian, Vegan, Gluten-Free).
+- **Online Payments:** Integrate a secure payment system so guests can conveniently pay their bill right from their device.
+- **Loyalty Rewards Program:** Let guests earn points and redeem special rewards for their orders.
+- **Multi-Language Support:** Make the digital menu accessible to a wider variety of guests with instant translations.
